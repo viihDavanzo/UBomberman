@@ -54,8 +54,6 @@ void AUBombermanCharacter::SetupPlayerInputComponent(class UInputComponent* Play
 {
 	// Set up gameplay key bindings
 	check(PlayerInputComponent);
-	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
-	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
 	PlayerInputComponent->BindAxis("MoveForward", this, &AUBombermanCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AUBombermanCharacter::MoveRight);
