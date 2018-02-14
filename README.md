@@ -103,6 +103,6 @@ o The first player to get 3 points win the game
 
 • Please check if the custom Game Instance is properly populated:
 
-'''
+```
 Edit -> Project Settings -> Maps & Modes -> Game Instance -> UBomberman_GameInstance
-'''
+```
