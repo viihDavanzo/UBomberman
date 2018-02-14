@@ -2,7 +2,13 @@
 
 I've challanged myself to create a quick and dirty “programmer-art” version of the old Dyna Blaster/Bomberman.
 
+[Dyna Blaster](https://www.youtube.com/watch?v=DMNxOmNzfb0) - Reference
+
 ## Prerequisites
+• **Unreal Engine version: 4.17**
+
+• **Visual Studio version: 2017 (for rebuilding purposes)**
+
 • Finish within one week
 
 • Don't spend more then 15 hours
@@ -69,7 +75,7 @@ o Previous score is saved
 o The first player to get 3 points win the game
 ```
 
-### Future improvements
+## Future improvements
 • AI enemies that behave like a player;
 
 • AI enemies that wander around randomly;
@@ -79,3 +85,24 @@ o The first player to get 3 points win the game
 • Music and FX;
 
 • Better input implementation in C++ (found a solution but were not able to implement in time: [Documentation](https://wiki.unrealengine.com/Local_Multiplayer_Tips))
+
+• Better level generation method (C++), maybe leaving level streaming behind
+
+## Installing
+
+• Simply download/clone the repository
+
+• Right-click UBomberman.uproject file and choose "Generate Visual Studio project files"
+
+• Double-click UBomberman.uproject and rebuild the project
+
+• **ENJOY :)**
+
+### Warnings
+• For better lightning/shading, please build the level "Game"
+
+• Please check if the custom Game Instance is properly populated:
+
+'''
+Edit -> Project Settings -> Maps & Modes -> Game Instance -> UBomberman_GameInstance
+'''
