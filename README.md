@@ -88,6 +88,24 @@ o The first player to get 3 points win the game
 
 • Better level generation method (C++), maybe leaving level streaming behind
 
+## Controls
+
+• Player 1:
+
+```
+o Movement: W, A, S and D
+
+o Place bomb: Space Bar
+```
+
+• Player 2:
+
+```
+o Movement: &#2191, &#2190, &#2193 and &#2192
+
+o Place bomb: Left Ctrl
+```
+
 ## Installing
 
 • Simply download/clone the repository
