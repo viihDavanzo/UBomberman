@@ -1,87 +1,69 @@
-# Project Title
+# The UBomberman Challenge
 
-One Paragraph of project description goes here
+I've challanged myself to create a quick and dirty “programmer-art” version of the old Dyna Blaster/Bomberman.
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
+## Prerequisites
+• Finish within one week;
+• Don't spend more then 15 hours
 
 ```
-Give examples
+o Starting date: 02/07;
+o Ending date: 02/14;
+o TTC: ~14h;
 ```
 
-### Installing
+### Features
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+•  Static top-down view on the level + camera that pans in/out depending on distance between players in the level
+•  Procedural generated maps
+•  “Couch Co-Op”: Two players play on one machine using different keys to control two characters (keyboard)
+•  Implementation of different pickups
 
 ```
-until finished
+o  Longer bomb blasts
+o  More bombs
+o  Faster run speed
+o  Remote-controlled bombs (timed power-up, around 10 seconds)
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+•  Bomb placing by the player
 
 ```
-Give an example
+o  Player is starting with only one bomb that can be active at a time
+o  Placing a bomb subtracts one from the count, when the bomb explodes the count goes up again
+o  Amount is upgradable with pickups
+o  Once the remote detonator has been picked up only one bomb can be active until the power-up runs out
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
+•  Player death when standing in bomb blast
+•  Bomb blasts o  Should not be spherical but linear in the four main directions 
 
 ```
-Give an example
+o  Can penetrate players/pickups when going off (killing/destroying them)
+o  Are stopped by walls
+o  Trigger other bombs
 ```
 
-## Deployment
+•  Differentiation between destructible and indestructible walls, destructible walls can spawn random pickups (~30% chance to spawn something) upon destruction
+•  Win conditions:
 
-Add additional notes about how to deploy this on a live system
+```
+o  Show win screen when only one player is alive
+o  Show a map timer, that counts down and ends the round
+o  Show draw when the last players die in the same bomb blast (or chained bombs) or multiple players are alive when the timer runs out
+o  After round end, freeze game in its current state
+```
 
-## Built With
+•  Reset option on end screen
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+```
+o  Starts another round
+o  Previous score should be saved
+```
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+### Future improvements
+• AI enemies that behave like a player;
+• AI enemies that wander around randomly;
+• Better menus and UIs;
+• Music and FX;
+• Better input implementation in C++ (found a solution but were not able to implement in time: [Documentation](https://wiki.unrealengine.com/Local_Multiplayer_Tips))
